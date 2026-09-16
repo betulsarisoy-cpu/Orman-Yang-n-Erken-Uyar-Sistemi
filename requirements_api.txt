@@ -1,4 +1,10 @@
-# Mevcut model ortamındaki numpy, pandas, scikit-learn ve LightGBM/XGBoost
-# sürümlerine dokunmamak için burada yalnızca yeni gereken paket bulunur.
+gunicorn==23.0.0
+requests
+truststore
+pandas
+numpy
+scikit-learn
+lightgbm
+joblib
 flask==3.1.3
 requests>=2.32,<3

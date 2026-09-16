@@ -19,8 +19,10 @@ import requests
 import os
 import streamlit as st
 
-API_URL = "https://akdeniz-yangin-api.onrender.com"
-
+API_URL = "https://akdeniz-yangin-api.onrender.com"API_URL = os.getenv(
+    "YANGIN_API_URL",
+    "https://akdeniz-yangin-api.onrender.com",
+).rstrip("/")
 
 # ============================================================
 # 1. SAYFA AYARLARI
@@ -155,7 +157,10 @@ st.markdown(
 # ============================================================
 
 APP_DIR = Path(__file__).resolve().parent
-API_URL = os.getenv("YANGIN_API_URL", "http://127.0.0.1:5000").rstrip("/")
+API_URL = os.getenv(
+    "YANGIN_API_URL",
+    "https://akdeniz-yangin-api.onrender.com",
+).rstrip("/")
 model_from_environment = os.getenv("YANGIN_MODEL_PATH")
 
 MODEL_CANDIDATES = [

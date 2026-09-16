@@ -19,10 +19,7 @@ import requests
 import os
 import streamlit as st
 
-API_URL = "https://akdeniz-yangin-api.onrender.com"API_URL = os.getenv(
-    "YANGIN_API_URL",
-    "https://akdeniz-yangin-api.onrender.com",
-).rstrip("/")
+API_URL = "https://akdeniz-yangin-api.onrender.com"
 
 # ============================================================
 # 1. SAYFA AYARLARI

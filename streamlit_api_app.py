@@ -15,7 +15,17 @@ import numpy as np
 import pandas as pd
 import pydeck as pdk
 import requests
+
+import os
 import streamlit as st
+
+API_URL = st.secrets.get(
+    "YANGIN_API_URL",
+    os.getenv(
+        "YANGIN_API_URL",
+        "http://127.0.0.1:5000",
+    ),
+).rstrip("/")
 
 
 # ============================================================
